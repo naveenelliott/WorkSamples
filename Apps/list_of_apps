@@ -1,0 +1,4 @@
+https://boltsnoeventdata.streamlit.app/ - Post-Match Review with custom xG model and a goalkeeper report
+https://boltsteamevals.streamlit.app/ - evaluates each team and compares them against each other for the director of coaching to look at throughout the season.
+https://boltsclustering.streamlit.app/ - clusters groups of players that have similar characteristics from different age groups. Working on using physical data.
+https://boltsidp.streamlit.app/ - individual player development plan that breaks down a players metrics into percentiles and objective feedback.
