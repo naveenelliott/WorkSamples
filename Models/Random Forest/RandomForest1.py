@@ -6,6 +6,7 @@ from sklearn.metrics import accuracy_score
 # when we predicted a win, what percentage of the team did the team actually win?
 from sklearn.metrics import precision_score
 
+# This is predicting wins, losses, and draws over a premier league dataset
 matches = pd.read_csv('RandomForestProject/matches.csv', index_col=0)
 
 matches['date'] = pd.to_datetime(matches['date'])
