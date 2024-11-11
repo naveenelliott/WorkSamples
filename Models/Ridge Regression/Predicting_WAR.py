@@ -8,6 +8,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 #from pybaseball import batting_stats
 
+# This is predicting wins above replacement for baseball players
 batting = pd.read_csv('RandomForestProject/batting.csv')
 
 batting = batting.groupby('IDfg', group_keys=False).filter(lambda x: x.shape[0] > 1)
