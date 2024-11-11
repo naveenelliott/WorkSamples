@@ -8,6 +8,7 @@ from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 from sklearn.model_selection import cross_val_score
 
+# this is predicting fantasy football points
 # loading in dataset
 ffdata = pd.read_csv('RandomForestProject/ffdata.csv')
 
