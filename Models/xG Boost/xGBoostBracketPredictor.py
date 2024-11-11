@@ -11,6 +11,7 @@ from sklearn.metrics import make_scorer, accuracy_score, log_loss
 from sklearn.model_selection import cross_val_score, cross_val_predict
 from sklearn.linear_model import LogisticRegression
 
+# this is predicting the bracket for NCAA march madness men's basketball
 cbb = pd.read_csv('RandomForestProject/cbb_more.csv')
 
 del cbb['CONF'], cbb['GAMES'], cbb['W'], cbb['L']
