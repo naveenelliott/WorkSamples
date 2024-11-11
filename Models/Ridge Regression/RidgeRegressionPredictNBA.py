@@ -5,6 +5,7 @@ from sklearn.linear_model import RidgeClassifier
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import accuracy_score
 
+# this is predicting who will win an NBA game
 df = pd.read_csv('RandomForestProject/nba_games.csv', index_col=0)
 
 df = df.sort_values('date').reset_index(drop=True)
