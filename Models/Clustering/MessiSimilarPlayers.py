@@ -9,6 +9,7 @@ from highlight_text import fig_text, ax_text
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 from matplotlib import patheffects
 
+# Finding clusters for similar players to Messi
 just_values = pd.read_csv("Messi KMeans.csv")
 pukki = pd.read_csv("Messi.csv")
 
@@ -24,10 +25,12 @@ font_path = 'CookbookNormalRegular-6YmjD.ttf'
 cook = FontProperties(fname=font_path)
 
 x = just_values.values
+# scaling and transforming the data
 scaler = preprocessing.MinMaxScaler()
 x_scaled = scaler.fit_transform(x)
 X_norm = pd.DataFrame(x_scaled)
 
+# Transforming the statistics and metrics to two dimensions with PCA
 pca = PCA(n_components=2)
 reduced = pd.DataFrame(pca.fit_transform(X_norm))
 
@@ -47,6 +50,7 @@ reduced['name'] = names
 reduced.columns = ['x', 'y', 'cluster', 'name']
 reduced.head()
 
+# Creating a plot to visualize results
 legend_labels = ['Creative 10\'s', 'Target Men', 'Creative Wide Players', 'Creative Strikers']
 legend_markers = ['o', 'o', 'o', 'o']
 custom = ['#F7B5CD', '#3f383a', '#7f7f7f', 'white']
